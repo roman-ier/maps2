@@ -1,6 +1,7 @@
 import React from 'react';
 import PathComp from "../tamplates/PathComp";
 
+
 const SvgLayers = ({dataStore, colors}) => {
     return (
         <g className="SvgLayers">

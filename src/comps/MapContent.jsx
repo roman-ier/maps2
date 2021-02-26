@@ -2,11 +2,12 @@ import React from 'react';
 import MapHeader from "./MapHeader";
 import MapLayers from "./MapLayers";
 
-const MapContent = () => {
+const MapContent = ({mapLevelsSelect}) => {
+
     return (
         <div className='mapContent'>
             <MapHeader/>
-            <MapLayers/>
+            <MapLayers mapLevelsSelect={mapLevelsSelect}/>
             <div id="tooltip">
             </div>
             <div id="modalWindow">
