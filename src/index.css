@@ -1,13 +1,176 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0px;
+  padding: 0px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.map {
+  width: 40%;
+  margin: 0px auto;
+  font-weight: bold;
+}
+
+h3 {
+  color: red;
+}
+
+h4 {
+  color: White;
+  font-size: 120%;
+}
+
+.mapSwitcher {
+  text-align: center;
+  position: sticky;
+  top: 0;
+
+}
+
+.mapLayers {
+  margin: 10px;
+  display: block;
+  border: solid 2px black;
+}
+
+svg {}
+
+.svgLayer0 text {
+  font-size: 180%;
+}
+
+.svgLayer1 {}
+
+.svgLayer2 {}
+
+path {
+  opacity: .3;
+  font-size: 150%;
+}
+
+.partFocus:hover {
+  transition: opacity .2s ease;
+  opacity: .5;
+  cursor: pointer;
+
+}
+
+.form_radio_group {
+
+  display: inline-block;
+  overflow: hidden;
+}
+
+.form_radio_group-item {
+  display: inline-block;
+  float: left;
+}
+
+.form_radio_group input[type=radio] {
+  display: none;
+}
+
+.form_radio_group label {
+  background: Gainsboro;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0px 15px;
+  line-height: 34px;
+  border: 1px solid #999;
+  border-right: none;
+  user-select: none;
+}
+
+.form_radio_group .form_radio_group-item:first-child label {
+  border-radius: 6px 0 0 6px;
+}
+
+.form_radio_group .form_radio_group-item:last-child label {
+  border-radius: 0 6px 6px 0;
+  border-right: 1px solid #999;
+}
+
+/* Checked */
+.form_radio_group input[type=radio]:checked+label {
+  background: #ffe0a6;
+}
+
+/* Hover */
+.form_radio_group label:hover {
+  color: #666;
+}
+
+/* Disabled */
+.form_radio_group input[type=radio]:disabled+label {
+  background: #efefef;
+  color: #666;
+}
+
+#tooltip img {
+  width: 150px;
+  margin: 0px auto;
+  display: block;
+}
+
+#tooltip {
+  z-index: 9999;
+  position: absolute;
+  display: none;
+  top: 0px;
+  left: 0px;
+  background-color: #808080;
+  padding: 10px;
+  color: white;
+  opacity: 0.8;
+  border-radius: 5px;
+  max-width: 250px;
+  box-shadow: 0 0 7px 3px DimGray;
+}
+
+#modalWindowClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+#modalWindowClose:hover {
+  opacity: 1;
+}
+
+#modalWindow {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-color: #808080;
+  padding: 10px;
+  color: white;
+  opacity: 0.8;
+  border-radius: 5px;
+  max-width: 400px;
+
+  box-shadow: 0 0 7px 3px DimGray;
+}
+
+#modalWindow img {
+  width: 380px;
+  margin: 0px auto;
+  display: block;
+}
+
+
+
+@media (orientation:portrait) and (min-resolution: 192dpi) {
+  body {
+    font-size: 200%;
+  }
+
+  .map {
+    width: 100%;
+  }
+
+  .svgLayer0 text {
+    font-size: 100%;
+  }
 }
